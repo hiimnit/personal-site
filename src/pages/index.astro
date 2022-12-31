@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GithubLogo from "../components/GithubLogo.astro";
+---
+
+<Layout title="Hi! I'm nit">
+  <main class="mx-auto max-w-xl px-2 text-slate-800 md:px-0">
+    <h1 class="mb-6 mt-[25vh] text-5xl font-extrabold text-slate-900">Hi!</h1>
+
+    <p class="mb-2">I'm Filip.</p>
+    <p class="mb-1">
+      I like <a
+        href="https://www.typescriptlang.org"
+        class="font-bold transition-colors hover:text-slate-900">Typescript</a
+      >, <a
+        href="https://reactjs.org"
+        class="font-bold transition-colors hover:text-slate-900">React</a
+      > and <a
+        href="https://tailwindcss.com"
+        class="font-bold transition-colors hover:text-slate-900">Tailwind</a
+      >.
+    </p>
+
+    <p class="mb-1">
+      I have a habit of starting new projects and never finishing them.
+    </p>
+    <p class="mb-3">
+      Currently trying out <a
+        href="https://www.rust-lang.org"
+        class="font-bold transition-colors hover:text-slate-900">Rust</a
+      > and <a
+        href="https://astro.build"
+        class="font-bold transition-colors hover:text-slate-900">Astro</a
+      >.
+    </p>
+
+    <!-- <div class="rounded-xl bg-black/5 px-4 py-2">
+      <Counter initialValue={2} client:idle />
+    </div> -->
+
+    <h2 class="mb-2 text-2xl font-semibold">links</h2>
+
+    <ul>
+      <li>
+        <a
+          href="https://github.com/hiimnit"
+          class="flex items-center gap-0 font-mono transition-colors hover:text-slate-900"
+        >
+          <GithubLogo class="h-4 w-4 inline-block" />
+          <span>/hiimnit</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+</Layout>
