@@ -3,26 +3,65 @@ import Layout from "../layouts/Layout.astro";
 import GithubLogo from "../components/GithubLogo.astro";
 ---
 
+<!-- TODO 100 different hellos (original characters?) --><!-- TODO show pronunciation + language on hover -->
 <Layout title="Hi! I'm nit">
-  <main class="mx-auto max-w-xl px-2 text-slate-800 md:px-0">
-    <h1 class="mb-6 mt-[25vh] text-5xl font-extrabold text-slate-900">Hi!</h1>
+  <div class="mb-2 mt-[25vh] w-[100vw] overflow-hidden">
+    <div class="flex flex-row text-7xl font-extrabold">
+      <div class="w-[calc((100vw-36rem)/2)] overflow-hidden">
+        <div class="flex flex-row-reverse">
+          {
+            Array.from({ length: 33 }).map((_) => (
+              <h1 class="text-slate-900/5 transition-colors delay-100 duration-1000 hover:text-slate-900/80">
+                hello
+              </h1>
+            ))
+          }
+        </div>
+      </div>
+      <div class="w-[calc(100vw-(100vw-36rem)/2)] overflow-hidden">
+        <div class="flex flex-row">
+          <h1 class="italic text-slate-900 px-1">hi</h1>
+          {
+            Array.from({ length: 33 }).map((_) => (
+              <div class="group">
+                <!-- FIXME group vs peer vs ordering 
+                <div class="-mb-2 text-left text-base font-semibold text-slate-900/0 transition-colors delay-200 duration-1000 group-hover:text-slate-900/75">
+                  english
+                </div>
+                --> 
+                <h1 class="text-slate-900/5 transition-colors delay-200 duration-1000 hover:text-slate-900/80">
+                  hello
+                </h1>
+                <!--
+                <div class="-mt-2 text-right text-base font-semibold text-slate-900/0 transition-colors delay-200 duration-1000 group-hover:text-slate-900/75">
+                  [:helo:]
+                </div>
+                -->
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <main class="mx-auto max-w-xl px-2 font-medium text-slate-800 md:px-0">
     <p class="mb-2">I'm Filip.</p>
     <p class="mb-1">
-      I like <a
+      <a
         href="https://www.typescriptlang.org"
         class="font-bold transition-colors hover:text-slate-900">Typescript</a
-      >, <a
+      > / <a
         href="https://reactjs.org"
         class="font-bold transition-colors hover:text-slate-900">React</a
-      > and <a
+      > / <a
         href="https://tailwindcss.com"
         class="font-bold transition-colors hover:text-slate-900">Tailwind</a
-      >.
+      >
     </p>
 
     <p class="mb-1">
-      I have a habit of starting new projects and never finishing them.
+      I have a bad habit of starting new projects and never finishing them.
     </p>
     <p class="mb-3">
       Currently trying out <a
@@ -38,7 +77,19 @@ import GithubLogo from "../components/GithubLogo.astro";
       <Counter initialValue={2} client:idle />
     </div> -->
 
-    <h2 class="mb-2 text-2xl font-semibold">links</h2>
+    <!-- <div class="mb-3 flex flex-row gap-2">
+      <a href="/todo">
+        <div
+          class="hover:text-slate-00 rounded-xl bg-black/5 px-4 py-3 transition-colors hover:bg-black/10"
+        >
+          <div class="font-extrabold">Card</div>
+          <div>Card text</div>
+        </div>
+      </a>
+      <div class="rounded-xl bg-black/5 px-4 py-2">Card</div>
+    </div> -->
+
+    <!-- <h2 class="mb-2 text-2xl font-semibold">links</h2> -->
 
     <ul>
       <li>
